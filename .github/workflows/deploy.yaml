@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Deploy
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - uses: actions/setup-node@v3.6.0
         with:
           node-version: '16'
@@ -18,7 +18,8 @@ jobs:
       - uses: actions/setup-python@v4
         with:
           python-version: '3.7'
-      - run: pip install -r requirements.txt 
+      - run: python -V
+      - run: pip install -r requirements.txt
       - name: Publish
         uses: cloudflare/wrangler-action@2.0.0
         with:
