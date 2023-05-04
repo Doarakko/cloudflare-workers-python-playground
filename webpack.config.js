@@ -8,7 +8,7 @@ module.exports = {
                 test: /\.py$/,
                 loader: "transcrypt-loader",
                 options: {
-                    command: "python -m transcrypt"
+                    command: "python3 -m transcrypt"
                 }
             }
         ]
